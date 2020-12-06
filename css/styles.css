@@ -102,11 +102,11 @@ button {
     transition: padding .3s;
 }
 
-.btn-round:hover {
+.cards-container .card button:hover {
     padding-inline-end: 3em;
 }
 
-.btn-round:hover::after {
+.cards-container .card button:hover::after {
     content: "→";
     position: absolute;
     right: 1em;
@@ -218,6 +218,13 @@ button {
     box-shadow: -1px 0 0 #1d1d1d, inset 0 -6px 0 #58c93a;
 }
 
+.journal-list {
+    flex-direction: column;
+}
+
+.journal-list:hover {
+    visibility: visible;
+}
 /* PAGING BAR */
 
 .paging-bar {
@@ -231,7 +238,40 @@ button {
     text-transform: uppercase;
     letter-spacing: 0.9px;
 }
+/* MODAL */
+.modal {
+    margin: auto;
+    padding: 20px;
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* transform: translateX(-50%); */
+    background-color: rgb(27 25 45);
+    box-shadow: 0px 9px 0px 0px black;
+    text-align: center;
+    border-radius: 5%;
+    z-index: 2;
+}
 
+.modal h2 {
+    margin-top: 30vh;
+}
+
+.modal input {
+    display: block;
+    margin: 2em auto;
+    width: 15em;
+    font-family: lato;
+    border-radius: 2em;
+    padding: 0.5em;
+}
+
+.modal .btn-round {
+    background-color: rgb(10, 14, 15);
+    margin-inline-end: 1em;
+}
 /* FOOTER */
 
 .main-footer {
@@ -324,7 +364,7 @@ button {
     transition: opacity .8s;
 }
 
-body.open-menu .main-screen {
+body.open-screen .main-screen {
     visibility: visible;
     opacity: 1;
     z-index: 1;
@@ -394,6 +434,30 @@ body.open-menu .main-screen {
         width: 50%;
         object-fit: cover;
         margin-bottom: 0;
+    }
+    .modal {
+        margin: auto;
+        padding: 20px;
+        position: fixed;
+        top:150px;
+        left: 50%;
+        right: unset;
+        bottom: unset;
+        transform: translateX(-50%);
+        background-color: rgb(27 25 45);
+        box-shadow: 0px 9px 0px 0px black;
+        text-align: center;
+        border-radius: 5%;
+        z-index: 2;
+    }
+    .modal h2 {
+        margin-top: 1em;
+    }
+    .modal p:last-of-type {
+        margin-bottom: 3em;
+    }
+    .main-screen {
+        top:0;
     }
 }
     /* WIDE */
