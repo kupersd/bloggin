@@ -6,12 +6,12 @@
 
 @font-face {
     font-family: lato;
-    src: url(/fonts/Lato-Regular.ttf);
+    src: url(../fonts/Lato-Regular.ttf);
 }
 
 @font-face {
     font-family: euroF;
-    src: url(/fonts/eurof55.ttf);
+    src: url(../fonts/eurof55.ttf);
 }
 
 /* BASE */
